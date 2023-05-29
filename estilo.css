@@ -1,0 +1,591 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ESTILOS MENU */
+
+.contenedor {
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.menu {
+    background: #fff;
+    padding: 9px 20px;
+}
+.menu .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .log {
+    color: #000;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav ul li {
+    display: inline-block; /* con esta propiedad ponemos los objetos en linea horizontal */
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* ESTILO INTRO */
+
+#intro {
+    background: url(imagenes/intro.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Oswald';
+    display: flex;
+}
+#intro .izquierda {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 66%;
+    padding: 65px 75px;
+}
+#intro .derecha {
+    width: 57%;
+    color: #fff;
+    height: 503px; /* lo hacemospara crear el efecto de corte en la seccion */
+    background-image: linear-gradient(180deg, rgba(255,255,255,0)80%, #fff 80%); /* para crear el efecto se le pone un fondo blanco */
+}
+#intro .contenido {
+    background: red;
+    padding: 1px 50px 40px 50px;
+}
+
+#intro .izquierda p{
+    font-size: 15px;
+    letter-spacing: 14px;
+}
+#intro h1{
+    font-size: 66px;
+    font-weight: 100;
+    letter-spacing: 19px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+#intro a, #programs a, #testimonials a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    letter-spacing: 7px;
+    border-bottom: 2px solid red;
+    padding-bottom: 13px;
+    padding: 0 18px 13px 10px;
+}
+#intro .derecha a{
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 20px;
+    display: inline-block; /* para darle propieda de bloque y asi acomodarlo mejor */
+}
+#intro .derecha p {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+/* ESTILOS PROGRAMS */
+
+#programs {
+    padding-bottom: 90px;
+    text-align: center;
+    font-family: 'Oswald';
+}
+.rojo {
+    color: red;
+}
+#programs .cero {
+    font-size: 80px;
+    margin-bottom: 0;
+}
+#programs .ini{
+    letter-spacing: 18px;
+    font-size: 15px;
+}
+#programs h2 {
+    font-size: 63px;
+    font-weight: 100; /* bien fino */
+    letter-spacing: 16px;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+#programs p {
+    font-family:'Open Sans';
+    color: #666;
+    font-size: 15px;
+    width: 73%;
+    margin: auto; /* para que el texto este centrado hay que dar el margin auto cuando se le da un ancho definido */
+    line-height: 30px;
+}
+#programs a{
+    margin-top: 62px;
+    display: inline-block;
+}
+
+.contenedor-programs {
+    display: flex;
+    margin-top: 50px;
+    width: 88%;
+    margin: auto;
+}
+#programs #uno {
+    background: #2a2e3f;
+    color: #fff;
+}
+#uno p, #dos p, #tres p {
+    color: #fff;
+    text-align: left;
+    width: 100%;
+}
+
+h3 {
+    font-size: 26px;
+    letter-spacing: 4px;
+    margin: 0;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.program {
+    padding: 45px 47px;
+    box-shadow: 50px 70px 120px -42px rgba(0, 0, 0, 0.3);
+}
+#dos {
+    background: red;
+    color:#fff;
+    position: relative; /* esto es para ponerlo mas abajo o arriba de un mismo elemento */
+    top: 120px;
+}
+#tres p {
+    color: #000;
+}
+
+/* ESTILOS VIDEO */
+
+#section-video {
+    padding-top: 90px;
+    text-align: center;
+}
+#section-video .contenedor {
+    position: relative; /* el contenedor va a tener posicion relative dado que el boton se va a posicionar en base a este contenedor */
+    /* IMPORTANTE POSICION RELATIVE SIEMPRE VA SOBRE DIVS NO SOBRE VIDEOS O IMAGENES */
+}
+#section-video .botones {
+    position: absolute; /* le damos esa propiedad para poder moverlo donde nosotros queremos en base a la posicion del div contenedor */
+    top: 35%; /* le decimos que va a estar un %35 del alto del contenedor */
+    left: 46%; /* le decimos que va a estar al %46 a la izquierda del contenedor */
+}
+#section-video i {
+    font-size: 125px; /* tamaño del icono */
+    color: #fff;
+}
+#section-video button {
+    border: 0;
+    background: none;
+}
+
+/* ESTILOS JOIN */
+
+#join {
+    display: flex;
+    padding-top: 200px;
+}
+#join .izquierda {
+    width: 49%;
+    background: #fa2a20;
+    margin-left: 100px;
+    height: 340px;
+    position: relative;
+}
+
+#join img {
+    width: 47%;
+}
+
+#join .derecha {
+    width: 53%;
+    position: relative;
+    background: url(imagenes/join-back.jpg);
+    background-size: cover;
+}
+#join .izquierda a {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 15px 24px;
+    text-decoration: none;
+    display: inline-block; /* para ponerlo en bloque y poder manipular mejor el objeto */
+    font-family: 'Oswald';
+    letter-spacing: 5px;
+    position: absolute;
+    top: 8%;
+    left: 20%;
+}
+
+#join #uno {
+    position: absolute;
+    top: 24%;
+    left: 56%;
+    z-index: 1; /* para que la imagen este por sobre las demas */
+    width: 44%;
+}
+
+#join #dos {
+    position: absolute;
+    top: -44px; /* la vamos a subir */
+}
+
+#join #tres {
+    position: absolute;
+    left: 47%;
+    top: 24%;
+    width: 44%;
+}
+
+/* ESTILOS TESTIMONIALS */
+
+#testimonials {
+    padding-top: 90px;
+    text-align: center;
+}
+
+span.comillas {
+    font-size: 120px;
+    color: red;
+}
+#testimonials h2{
+    font-size: 63px;
+    font-weight: 100;
+    letter-spacing: 20px;
+    margin: 0; /* sacamos los margenes por defecto */
+    margin-bottom: 36px;
+    font-family: 'Oswald';
+}
+
+#testimonials a {
+    font-family: 'Oswald';
+}
+
+.contenedor-testimonials {
+    display: flex;
+    margin-top: 90px;
+    justify-content: center;
+}
+
+.testimonial {
+    width: 40%;
+    margin-right: 40px;
+}
+
+.testimonial .contenido {
+    display: flex; /* esto lo hacemos asi para que la foto quede a la derecha cuando demos el flex */
+}
+
+.foto {
+    background: url(imagenes/testimonial.jpg);
+    background-size: cover;
+    width: 384px;
+    height: 85px;
+    border-radius: 100%;
+    margin-top: 22px;
+    background-position: center;
+}
+
+.testimonial p {
+    color: #666;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 24px;
+    line-height: 30px;
+    font-family: 'Open Sans';
+}
+p.nombre {
+    margin-left: 97px;
+    font-weight: bold;
+}
+
+/* ESTILO CONTACTO */
+
+#contacto {
+    background: url(imagenes/contacto.jpg);
+    font-family: 'Oswald';
+    color: #fff;
+    display: flex;
+}
+
+#contacto .izquierda {
+    padding: 100px;
+    width: 43%;
+}
+#contacto .izquierda p {
+    font-size: 15px;
+    letter-spacing: 12px;
+}
+
+#contacto h2 {
+    font-size: 66px;
+    font-weight: 100;
+    letter-spacing: 19px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+#contacto form input[type="text"], #contacto form input[type="email"], #contacto form textarea {
+    width: 100%;
+    border: 0;
+    background: none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 34px;
+    font-family: 'Oswald';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+/* Ponerle estilo al PLACEHOLDER */
+::placeholder{ 
+    color: #fff;
+}
+
+input[type="submit"] {
+    background: none;
+    border: 1px solid #fff;
+    padding: 20px 30px;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Oswald';
+    letter-spacing: 5px;
+    float: right;  /* PARA QUE EL OBJETO SE PONGA A LA DERECHA DEL CONTENEDOR */
+}
+
+#contacto .derecha {
+    background: #f7291f;
+    align-self: flex-end ; /* NUEVA PROPIEDAD MUY IMPORTANTE PARA POSICIONAR LOS ELEMENTOS EN EL EJE VERTICAL */
+    padding: 5px 50px 50px 50px;
+    width: 36%;
+}
+.gym-hours {
+    box-shadow: 0px 70px 120px -42px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    margin-bottom: 32px;
+}
+
+.gym-hours ul {
+    padding: 0;
+}
+
+.gym-hours li {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.pass {
+    background: #fff;
+    color: #000;
+    padding: 30px;
+}
+
+.pass a {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid red;
+    padding: 22px 30px;
+    display: inline-block;
+    font-size: 17px;
+    letter-spacing: 5px;
+    margin-top: 20px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 800px) {
+
+    /* Responsive Nav */
+    nav {
+        position: absolute;
+        top: 11%;
+        width: 100%;
+        background: #000;
+        left: 0;
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        float: right;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 20PX;
+    }
+    nav ul li a {
+        color: #fff;
+    }
+    /* Responsive Intro */
+    
+    #intro .izquierda {
+        width: 100%;
+        padding: 32px 32px;
+        height: 258px;
+    }
+    #intro .izquierda p {
+        letter-spacing: 9px;
+    }
+    #intro h1 {
+        font-size: 36px;
+        letter-spacing: 13px;
+    }
+    #intro a, #programs a, #testimonials a {
+        font-size: 13px;
+        letter-spacing: 4px;
+    }
+    #intro {
+        flex-direction: column;
+    }
+    #intro .derecha {
+        width: 100%;
+        height: 237px;
+
+    }
+
+    /* Responsive programs */
+
+    #programs .cero {
+        font-size: 57px;
+    }
+    #programs .ini {
+        letter-spacing: 12px;
+        font-size: 15px;
+    }
+    #programs h2 {
+        font-size: 34px;
+    }
+    #programs p {
+        width: 100%;
+    }
+    .contenedor-programs {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    #dos {
+        top: 35px;
+    }
+    #tres {
+        margin-top: 50px;
+    }
+    #video {
+        width: 340px;
+        height: 250px;
+    }
+    #section-video i {
+        font-size: 62px;
+    }
+    #section-video .botones {
+        top: 45%;
+        left: 41%;
+    }
+    #section-video {
+        padding: 0;
+    }
+    /* Responsive JOIN */
+    
+    #join {
+        flex-direction: column;
+    }
+    #join .izquierda {
+        width: 100%;
+        margin-left: 0;
+    }
+    #join #uno {
+        top: 34%;
+        left: 30%;
+    }
+    #join .derecha {
+        width: 100%;
+    }
+    #join #tres {
+        left: 47%;
+        top: 82px;
+        width: 53%;
+    }
+    #join #dos {
+        top: 1px;
+    }
+    #join img {
+        width: 63%;
+    }
+    /* Responsive TESTIMONIALs */
+    #testimonials {
+        padding-top: 390px;
+    }
+    #testimonials h2 {
+        font-size: 24px;
+    }
+    .contenedor-testimonials {
+        flex-direction: column;
+    }
+    .testimonial {
+        width: 100%;
+    }
+    .foto {
+        height: 59px;
+    }
+    /* Responsive CONTACTO */
+
+    #contacto {
+        flex-direction: column;
+    }
+    #contacto .izquierda {
+        padding: 26px;
+        width: 100%;
+    }
+    #contacto .izquierda p {
+        letter-spacing: 9px;
+    }
+    #contacto h2 {
+        font-size: 35px;
+    }
+    #contacto form input[type="text"], #contacto form input[type="email"], #contacto form textarea {
+        width: 82%;
+    }
+    input[type="submit"] {
+        float: left;
+    }
+    #contacto .derecha {
+        padding: 5px 18px 50px 17px;
+        width: 91%;
+    }
+    .gym-hours {
+        padding: 16px;
+    }
+    .pass {
+        padding: 13px;
+    }
+}
+
+
+
+
+
+
+
+
+

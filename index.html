@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no  ">
+    <title>Gym</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0916a5db50.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="contenedor">
+                <p class="logo">OnFit Fitness Gym</p>
+                <img src="imagenes/menu.png" class="menu-icon" alt="">
+                <nav>
+                    <ul>
+                        <li><a href="#programs">Programas</a></li>
+                        <li><a href="#join">Unete Ahora</a></li>
+                        <li><a href="#testimonials">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ESTRUCTURA INTRO -->
+    <section id="intro">
+        <div class="izquierda">
+            <p>MAS GRANDE.MAS FUERTE.MAS RAPIDO</p>
+            <h1>ONFIT FITNESS GYM</h1>
+            <a href="">EMPIEZA HOY</a> 
+        </div>
+        <div class="derecha">
+            <div class="contenido">
+                <p>PASE DE PRUEBA GRATIS</p>
+                <a href="">QUIERO MI PASE</a>
+            </div>
+        </div>
+    </section>
+    <!-- ESTRUCTURA PROGRAMS -->
+    <section id="programs">
+        <div class="contenedor">
+            <div class="rojo cero">0.00</div>
+            <div class="rojo ini">INICIACION GRATIS</div>
+            <h2>DISTINTOS PROGRAMAS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sunt mollitia ipsum quidem quo.
+                Doloribus eius nobis quisquam mollitia, modi, dicta dolor deleniti repudiandae voluptatum facilis et
+                libero qui repellendus excepturi voluptates fugiat accusantium. Pariatur odio nostrum ex, aliquid unde
+                illo magni laborum exercitationem, vel perspiciatis sit, ab aspernatur vero?</p>
+            <a href="">TODOS LOS PROGRAMAS</a>
+            <div class="contenedor-programs">
+                <div class="program" id="uno">
+                    <h3>PERSONAL TRAINING</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor magnam nostrum accusamus,
+                        architecto culpa vero enim excepturi, adipisci, eius officiis eos itaque obcaecati asperiores
+                        veritatis expedita hic recusandae repellendus.</p>
+                </div>
+
+                <div class="program" id="dos">
+                    <h3>MUSCULACION</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor magnam nostrum
+                        accusamus, architecto culpa vero enim excepturi, adipisci, eius officiis eos itaque
+                        obcaecati asperiores veritatis expedita hic recusandae repellendus.</p>
+                </div>
+
+                <div class="program" id="tres">
+                    <h3>AEROBICO</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor magnam nostrum
+                        accusamus, architecto culpa vero enim excepturi, adipisci, eius officiis eos itaque
+                        obcaecati asperiores veritatis expedita hic recusandae repellendus.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ESTRUCCTURA VIDEO -->
+    <section id="section-video">
+        <div class="contenedor">
+            <video width="900px" height="700px" src="imagenes/video.mp4" id="video"></video> <!-- en la misma etiqueta de video lo ponemos los atributos de alto y ancho. -->
+            <div class="botones">
+                <button id="boton" onclick="playVideo()"><i class="fa-regular fa-circle-play"></i></button> <!-- al boton le ponemos una funcion "playVideo()" siempre van los parentesis cuando es una funcion. Para decirle que cuando se hace click tiene que activarse el video  -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMACION JAVASCRIPT -->
+    <script>
+
+/* DARLE PLAY AL VIDEO */
+
+/* VARIABLES */
+
+var video = document.getElementById('video') /* estamos asignando a la variable video lo que este en el documento con el uid video */
+var boton = document.getElementById('boton');
+
+/* FUNCION DE DARLE PLAY AL VIDEO */
+
+function playVideo() { //cuando se hace click en el boton de video se activa esta funcion
+    video.play(); //a video dale play.
+    boton.style.display = 'none';//luego a ese boton cambiale el estylo a display none //elemento(boton).style(avisamos que cambiamos el estilo).display(que estilo vamos a cambiar) = 'none' (propiedad de estilo)
+    //para que desaparezca el boton de play(el icono)    
+}
+
+/* EVENTO DE LO QUE SUCEDE CUANDO TERMINA EL VIDEO */
+
+video.addEventListener('ended',function(){ //a la variable(video) le voy a agregar un evento de escuchar(addEventListener)ENDED(cuando el video termina) realiza la siguiente funcion.
+    boton.style.display= 'block' //a la variable(boton).style(agregale el estilo).display(que estilo queres agrregar)=block(que se muestre denuevo)
+
+})
+
+    </script>
+
+<!-- ESTRUCCUTRA JOIN -->
+
+<section id="join">
+
+<div class="izquierda">
+    <a href="">EMPIEZA AHORA</a>
+    <img id="uno" src="imagenes/izq.jpg" alt="">
+</div>
+<div class="derecha">
+    <img id="dos" src="imagenes/der1.jpg" alt="">
+    <img id="tres" src="imagenes/der2.jpg" alt="">
+</div>
+</section>
+
+<!-- ESTRUCCUTRA TESTIMONIALS -->
+
+<section id="testimonials">
+    <div class="contenedor">
+        <span class="comillas">"</span>
+        <h2>TESTIMONIOS</h2>
+        <a href="">UNETE AL MOVIMIENTO</a>
+        <div class="contenedor-testimonials">
+
+            <div class="testimonial">
+                <div class="contenido">
+                    <div class="foto"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iste voluptates repellat accusamus deleniti quae beatae itaque. Eos dolorem molestias, praesentium omnis nisi ex! Ipsam enim natus similique esse quae obcaecati ex quasi, expedita iste amet eaque. Labore consequuntur illo nemo esse sint, nihil, doloremque temporibus voluptates dolore voluptas harum.</p>
+                </div>
+                <p class="nombre">Braian Ocampo</p>
+            </div>
+
+            <div class="testimonial">
+                <div class="contenido">
+                    <div class="foto"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iste voluptates repellat accusamus deleniti quae beatae itaque. Eos dolorem molestias, praesentium omnis nisi ex! Ipsam enim natus similique esse quae obcaecati ex quasi, expedita iste amet eaque. Labore consequuntur illo nemo esse sint, nihil, doloremque temporibus voluptates dolore voluptas harum.</p>
+                </div>
+                <p class="nombre">Braian Ocampo</p>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- ESTRUCCTURA CONTACTO -->
+<section id="contacto">
+
+    <div class="izquierda">
+        <p>MAS GRANDE.MAS FUERTE.MAS RAPIDO</p>
+        <h2>REGISTRATE</h2>
+        <form action="">
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="E-mail">
+            <textarea placeholder="Mensaje"></textarea>
+            <input type="submit" value="ENVIAR">
+        </form>
+    </div>
+    <div class="derecha">
+        <div class="gym-hours">
+            <h3>HORARIOS</h3>
+            <ul>
+                <li>Lunes a Viernes: 7am - 11pm</li>
+                <li>Sabados: 8am - 10pm</li>
+                <li>Domingos y Feriados: 9am - 21pm</li>
+            </ul>
+        </div>
+        <div class="pass">
+            <h3>PASE GRATIS DE 3 DIAS</h3>
+            <a href="">RECLAMAR</a>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> <!-- Pegamos el JQUERY antes del scrpit para que lo cargue primero -->
+<script src="script.js"></script>
+</body>
+
+</html>
